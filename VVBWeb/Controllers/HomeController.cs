@@ -144,15 +144,3 @@ namespace VVBWeb.Controllers
         }
     }
 }
-
-
-
-
-//public IActionResult Aanmelden(Klant k)
-// videoRepository.Add(verhuring);
-//return View(videoRepository.GetFilms(genre.GenreId));
-// ViewBag.TempModel = model;
-//ViewBag.Voornaam = HttpContext.Session.GetString("Voornaam");
-//ViewBag.Naam=HttpContext.Session.GetString("Naam");
-//model = new VVBViewModel();
-//HttpContext.Session.Clear();
