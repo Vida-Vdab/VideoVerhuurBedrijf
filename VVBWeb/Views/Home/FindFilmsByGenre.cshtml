@@ -1,0 +1,40 @@
+﻿@model VVBViewModel
+@{
+    ViewData["Title"] = "FindFilmsByGenre";
+}
+
+<h3>@ViewBag.Naam</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Titel</td>
+            <td>Prijs</td>
+            <td>In voorraad</td>
+            <td>Huren</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Film in Model.Films)
+        {
+            <tr>
+                <td>@Film.Titel</td>
+                <td>@Html.DisplayFor(m => Film.Prijs)</td>
+                <td>@Film.InVoorraad</td>
+
+                @if(Film.InVoorraad > 0 && !Model.Verhuringen.Any(f=> f.FilmId==Film.FilmId))
+                {
+                    <td>
+                        <a asp-action="ToevoegenFilmNaarMandje" asp-route-FilmId="@Film.FilmId" asp-route-Titel ="@Film.Titel"
+                           asp-route-Invoorraad="@Film.InVoorraad" asp-route-Prijs="@Film.Prijs.ToString().Replace(',','.')">
+
+                            <img class="afbeelding" src="~/images/plus.png" alt="plus" />
+                        </a>
+                    </td>
+                 }
+
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="GetAllGenres" class="btn btn-primary">Terug naar genre-overzicht</a>

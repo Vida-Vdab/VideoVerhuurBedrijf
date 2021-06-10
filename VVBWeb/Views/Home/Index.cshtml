@@ -1,0 +1,17 @@
+﻿@model Klant
+
+<h5>Welkom ! Meld je aan om te kunnen huren!</h5>
+<form asp-action="Aanmelden" method="post">
+    <label asp-for="Naam"></label>
+    <input asp-for="Naam" />
+    <label asp-for="PostCode"></label>
+    <input asp-for="PostCode" />
+
+    <input type="submit" value="Aanmelden" class="btn btn-primary btn-lg" />
+</form>
+@if (ViewBag.ErrorMessage == "Onbekende klant, probeer opnieuw.")
+{
+    <p class="error">
+        @ViewBag.ErrorMessage
+    </p>
+}

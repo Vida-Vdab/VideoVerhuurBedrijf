@@ -1,0 +1,14 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+
+@if (HttpContextAccessor.HttpContext.Session.IsAvailable && HttpContextAccessor.HttpContext.Session.GetString("Naam") != null
+          && HttpContextAccessor.HttpContext.Session.GetString("Voornaam") != null)
+{
+    string naam = HttpContextAccessor.HttpContext.Session.GetString("Naam");
+    string voornaam = HttpContextAccessor.HttpContext.Session.GetString("Voornaam");
+
+    <h6>Welkom, @voornaam @naam </h6>
+}
+
+
+
+

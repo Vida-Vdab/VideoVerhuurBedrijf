@@ -1,0 +1,32 @@
+﻿@model VVBViewModel
+@{
+    ViewData["Title"] = "Winkelmandje";
+}
+
+<h2>Winkelmandje</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <td colspan="2">Titel</td>
+            <td>Prijs</td>
+            <td>Verwijderen</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var verhuring in Model.Verhuringen)
+        {
+            <tr>
+                <td colspan="2">@verhuring.Film.Titel</td>
+                <td>@Html.DisplayFor(m => verhuring.Film.Prijs)</td>
+                <td>
+                    <a asp-action="VerwijderenFilmUitMandje" asp-route-FilmId="@verhuring.Film.FilmId"
+                       asp-route-Titel="@verhuring.Film.Titel" asp-route-Prijs="@verhuring.Film.Prijs.ToString().Replace(',','.')">
+                        <img class="afbeelding" src="~/images/delete.png" alt="delete" />
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="GetAllGenres" class="btn btn-primary">Verder winkelen</a>
+<a asp-action="Afrekenen" class="btn btn-primary">Afrekenen</a>

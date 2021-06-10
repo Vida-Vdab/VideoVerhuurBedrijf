@@ -1,0 +1,8 @@
+﻿@model VVBViewModel
+@{
+    ViewData["Title"] = "VerwijderenFilmUitMandje";
+}
+
+<h1>Verwijder gehuurde film</h1>
+<p>"@Model.GehuurdeFilm.Titel " verwijderen uit jouw winkelmandje? </p><br /><a asp-action="BevestigenVanVerwijder" class="btn btn-danger">Ja</a><a asp-action="Winkelmandje" class="btn btn-primary">Neen</a>
+

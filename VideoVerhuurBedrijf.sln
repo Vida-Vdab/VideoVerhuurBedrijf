@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VVBWeb", "VVBWeb\VVBWeb.csproj", "{8E3AD512-F9DA-4A33-88AC-92399C08BC70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VVBData", "VVBData\VVBData.csproj", "{5930B30E-72F9-4179-903F-BEF8A2F8BE81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E3AD512-F9DA-4A33-88AC-92399C08BC70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E3AD512-F9DA-4A33-88AC-92399C08BC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E3AD512-F9DA-4A33-88AC-92399C08BC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E3AD512-F9DA-4A33-88AC-92399C08BC70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5930B30E-72F9-4179-903F-BEF8A2F8BE81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5930B30E-72F9-4179-903F-BEF8A2F8BE81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5930B30E-72F9-4179-903F-BEF8A2F8BE81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5930B30E-72F9-4179-903F-BEF8A2F8BE81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {337CA193-1086-4D18-88CA-B762B0BCDB71}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Genre>
+@{
+    ViewData["Title"] = "GetAllGenres";
+}
+
+<h6 class="border">Klik op het gewenste GENRE</h6>
+
+@foreach(var genre in Model)
+{ 
+     <a class="mx-0" asp-action="FindFilmsByGenre" asp-route-GenreId ="@genre.GenreId" asp-route-GenreNaam="@genre.GenreNaam">@genre.GenreNaam</a>
+ }
+
