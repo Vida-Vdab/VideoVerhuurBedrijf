@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using VVBData.Models;
 using VVBData.Repositories;
+using VVBWeb.Filters;
 
 namespace VVBWeb
 {
@@ -33,7 +34,12 @@ namespace VVBWeb
             services.AddSession();
             services.AddHttpContextAccessor();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add(typeof(CustomActionFilter));
+            });
+            //services.AddControllersWithViews();
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

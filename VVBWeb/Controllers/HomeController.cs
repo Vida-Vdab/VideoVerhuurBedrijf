@@ -8,10 +8,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using VVBData.Models;
 using VVBData.Repositories;
+using VVBWeb.Filters;
 using VVBWeb.Models;
+//using Newtonsoft.Json;
 
 namespace VVBWeb.Controllers
 {
+   [TypeFilter(typeof(CustomExceptionFilter))]
     public class HomeController : Controller
     {
         private IVideoRepository videoRepository;
@@ -30,7 +33,7 @@ namespace VVBWeb.Controllers
             }
             return View();
         }
-
+        
         [HttpPost]
         public IActionResult Aanmelden(Klant k)
         {
